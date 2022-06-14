@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundamentos Flexbox</title>
     <style>
+        .container {
+            border: 2px solid black;
+            margin: 0 auto;
+            display: flex;
+        }
+        .container2 {
+            border: 2px solid black;
+            margin: 0 auto;
+        }
         .item {
             font-size: 24px;
             text-align: center;
@@ -19,6 +28,15 @@
             font-size: 24px;
             text-align: center;
             color: black;
+            margin: 5px;
+        }
+        .item3 {
+            background-color: blueviolet;
+            margin: 10px;
+            color: white;
+            text-align: center;
+            flex: 1;
+            font-size: 24px;
         }
         .flex-container {
             margin: 5px;
@@ -104,8 +122,49 @@
         .rr-wrapflow {
             flex-flow: row-reverse wrap-reverse;
         }
+        .f-start {
+            justify-content: start;
+        }
+        .f-end {
+            justify-content: end;
+        }
+        .f-center {
+            justify-content: center;
+        }
+        .f-space-b {
+            justify-content: space-between;
+        }
+        .f-space-a {
+            justify-content: space-around;
+        }
+        .center {
+            align-items: center;
+        }
+        .stretch {
+            align-items: stretch;
+        }
+        .start {
+            align-items: flex-start;
+        }
+        .end {
+            align-items: flex-end;
+        }
+        .baseline {
+            align-items: baseline;
+        }
+        .flex {
+            flex: 30;
+        }
+        .central {
+            height: 300px;
+            justify-content: center;
+        }
+        .central .item3 {
+            flex: 1;
+            padding: 20px;
+        }
         .blue {
-            background-color: blue;
+            background-color: royalblue;
         }
         .green {
             background-color: green;
@@ -147,7 +206,7 @@
         <div class="item gray">4</div>
     </div>
 <!--row e row reverse-->
-    <h1 class="item2">Exemplos de row e row-reverse</h1>
+    <h1 class="item2">Exemplos de row</h1>
     <ul class="flex-container3 row">
         <li class="flex-item">1</li>
         <li class="flex-item">2</li>
@@ -155,6 +214,7 @@
         <li class="flex-item">4</li>
         <li class="flex-item">5</li>
     </ul>
+    <h1 class="item2">Exemplos de row-reverse</h1>
     <ul class="flex-container3 row-reverse">
         <li class="flex-item">1</li>
         <li class="flex-item">2</li>
@@ -213,18 +273,95 @@
         <li class="flex-item">6</li>
         <li class="flex-item">7</li>
     </ul>
-
-
+<!--É possível usar o justify content também com column, não apenas em row-->
+    <h1 class="item2">Justify Content - Start</h1>
+    <section class="container f-start">
+        <div class="item2 red">Um</div>
+        <div class="item2 red">Dois</div>
+        <div class="item2 red">Três</div>
+        <div class="item2 red">Quatro</div>
+    </section>
+    <h1 class="item2">Justify Content - End</h1>
+    <section class="container f-end">
+        <div class="item2 gray">Um</div>
+        <div class="item2 gray">Dois</div>
+        <div class="item2 gray">Três</div>
+        <div class="item2 gray">Quatro</div>
+    </section>
+    <h1 class="item2">Justify Content - Center</h1>
+    <section class="container f-center">
+        <div class="item2 green">Um</div>
+        <div class="item2 green">Dois</div>
+        <div class="item2 green">Três</div>
+        <div class="item2 green">Quatro</div>
+    </section>
+    <h1 class="item2">Justify Content - space-between</h1>
+    <section class="container f-space-b">
+        <div class="item2 blue">Um</div>
+        <div class="item2 blue">Dois</div>
+        <div class="item2 blue">Três</div>
+        <div class="item2 blue">Quatro</div>
+        
+    </section>
+    <h1 class="item2">Justify Content - space-arround</h1>
+    <section class="container f-space-a">
+        <div class="item2 blue">Um</div>
+        <div class="item2 blue">Dois</div>
+        <div class="item2 blue">Três</div>
+        <div class="item2 blue">Quatro</div>
+        
+    </section>
+<!--Exemplos de align items-->
+<!--É possível usar o align items também com column, não apenas em row-->
+    <h1 class="item2">Alignt items - Center</h1>
+    <section class="container center flex">
+        <div class="item3">Arthur</div>
+        <div class="item3">Santiago</div>
+        <div class="item3">de Oliveira</div>
+        <div class="item3">31</div>
+    </section>
+    <h1 class="item2">Alignt items - Stretch</h1>
+    <section class="container stretch">
+        <div class="item3">Arthur</div>
+        <div class="item3">Santiago</div>
+        <div class="item3">de Oliveira</div>
+        <div class="item3">31</div>
+    </section>
+    <h1 class="item2">Alignt items - Flex Start</h1>
+    <section class="container start">
+        <div class="item3">Arthur</div>
+        <div class="item3">Santiago</div>
+        <div class="item3">de Oliveira</div>
+        <div class="item3">31</div>
+    </section>
+    <h1 class="item2">Alignt items - Flex End</h1>
+    <section class="container end">
+        <div class="item3">Arthur</div>
+        <div class="item3">Santiago</div>
+        <div class="item3">de Oliveira</div>
+        <div class="item3">31</div>
+    </section>
+    <h1 class="item2">Alignt items - Baseline</h1>
+    <section class="container baseline">
+        <div class="item3">Arthur</div>
+        <div class="item3"><br>Santiago</div>
+        <div class="item3">de Oliveira</div>
+        <div class="item3"><br>todos os guerreiros desse mundo ção.</div>
+    </section>
+    <h1 class="item2">Alinhamento Central de Item</h1>
+    <section class="container central center">
+        <div class="item3">A propriedade CSS align-items estabelece o valor align-self em todos filhos diretos como um grupo. A propriedade align-self estabelece o alinhamento de um certo item dentro do bloco que o contém.</div>
+    </section>
 <!-- column e column reverse-->
     <h1 class="item2">Exemplos de column e column-reverse</h1>
-    <ul class="flex-container column">    
+    <ul class="column">    
         <li class="flex-item">1</li>
         <li class="flex-item">2</li>
         <li class="flex-item">3</li>
         <li class="flex-item">4</li>
         <li class="flex-item">5</li>
     </ul>
-    <ul class="flex-container column-reverse">
+    <ul class="column-reverse">
         <li class="flex-item">1</li>
         <li class="flex-item">2</li>
         <li class="flex-item">3</li>
