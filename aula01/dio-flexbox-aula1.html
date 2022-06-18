@@ -15,6 +15,12 @@
             border: 2px solid black;
             margin: 0 auto;
         }
+        .container3 {
+            border: 2px solid black;
+            display: flex;
+            max-width: none;
+            justify-content: center;
+        }
         .item {
             font-size: 24px;
             text-align: center;
@@ -163,6 +169,18 @@
             flex: 1;
             padding: 20px;
         }
+        .fg-0 {
+            flex-grow: 0;
+        }
+        .fg-1 {
+            flex-grow: 1;
+        }
+        .fg-2 {
+            flex-grow: 2;
+        }
+        .fg-3 {
+            flex-grow: 3;
+        }
         .blue {
             background-color: royalblue;
         }
@@ -189,7 +207,7 @@
         <div class="item blue">3</div>
         <div class="item gray">4</div>
     </div>
-
+    <br>
     <h1 class="item2">warp</h1>
     <div class="flex-container2 wrap">
         <div class="item green">1</div>
@@ -197,7 +215,7 @@
         <div class="item blue">3</div>
         <div class="item gray">4</div>
     </div>
-
+    <br>
     <h1 class="item2">warp reverse</h1>
     <div class="flex-container2 wrap-reverse">
         <div class="item green">1</div>
@@ -205,6 +223,7 @@
         <div class="item blue">3</div>
         <div class="item gray">4</div>
     </div>
+    <br>
 <!--row e row reverse-->
     <h1 class="item2">Exemplos de row</h1>
     <ul class="flex-container3 row">
@@ -214,6 +233,7 @@
         <li class="flex-item">4</li>
         <li class="flex-item">5</li>
     </ul>
+    <br>
     <h1 class="item2">Exemplos de row-reverse</h1>
     <ul class="flex-container3 row-reverse">
         <li class="flex-item">1</li>
@@ -222,6 +242,7 @@
         <li class="flex-item">4</li>
         <li class="flex-item">5</li>
     </ul>
+    <br>
 <!--exemplos usando o flex flow-->
     <h1 class="item2">Exemplos de flex flow row nowrap</h1>
     <ul class="flex-container2 nowrapflow">
@@ -233,6 +254,7 @@
         <li class="flex-item">6</li>
         <li class="flex-item">7</li>
     </ul>
+    <br>
     <h1 class="item2">Exemplos de flex flow row wrap</h1>
     <ul class="flex-container2 wrapflow">
         <li class="flex-item">1</li>
@@ -243,6 +265,7 @@
         <li class="flex-item">6</li>
         <li class="flex-item">7</li>
     </ul>
+    <br>
     <h1 class="item2">Exemplos de flex flow row-reverse nowrap</h1>
     <ul class="flex-container2 r-nowrapflow">
         <li class="flex-item">1</li>
@@ -253,6 +276,7 @@
         <li class="flex-item">6</li>
         <li class="flex-item">7</li>
     </ul>
+    <br>
     <h1 class="item2">Exemplos de flex flow row-reverse wrap</h1>
     <ul class="flex-container2 r-wrapflow">
         <li class="flex-item">1</li>
@@ -263,6 +287,7 @@
         <li class="flex-item">6</li>
         <li class="flex-item">7</li>
     </ul>
+    <br>
     <h1 class="item2">Exemplos de flex flow row-reverse wrap-reverse</h1>
     <ul class="flex-container2 rr-wrapflow">
         <li class="flex-item">1</li>
@@ -273,6 +298,7 @@
         <li class="flex-item">6</li>
         <li class="flex-item">7</li>
     </ul>
+    <br>
 <!--É possível usar o justify content também com column, não apenas em row-->
     <h1 class="item2">Justify Content - Start</h1>
     <section class="container f-start">
@@ -281,6 +307,7 @@
         <div class="item2 red">Três</div>
         <div class="item2 red">Quatro</div>
     </section>
+    <br>
     <h1 class="item2">Justify Content - End</h1>
     <section class="container f-end">
         <div class="item2 gray">Um</div>
@@ -288,6 +315,7 @@
         <div class="item2 gray">Três</div>
         <div class="item2 gray">Quatro</div>
     </section>
+    <br>
     <h1 class="item2">Justify Content - Center</h1>
     <section class="container f-center">
         <div class="item2 green">Um</div>
@@ -295,6 +323,7 @@
         <div class="item2 green">Três</div>
         <div class="item2 green">Quatro</div>
     </section>
+    <br>
     <h1 class="item2">Justify Content - space-between</h1>
     <section class="container f-space-b">
         <div class="item2 blue">Um</div>
@@ -303,6 +332,7 @@
         <div class="item2 blue">Quatro</div>
         
     </section>
+    <br>
     <h1 class="item2">Justify Content - space-arround</h1>
     <section class="container f-space-a">
         <div class="item2 blue">Um</div>
@@ -311,6 +341,7 @@
         <div class="item2 blue">Quatro</div>
         
     </section>
+    <br>
 <!--Exemplos de align items-->
 <!--É possível usar o align items também com column, não apenas em row-->
     <h1 class="item2">Alignt items - Center</h1>
@@ -320,6 +351,7 @@
         <div class="item3">de Oliveira</div>
         <div class="item3">31</div>
     </section>
+    <br>
     <h1 class="item2">Alignt items - Stretch</h1>
     <section class="container stretch">
         <div class="item3">Arthur</div>
@@ -327,6 +359,7 @@
         <div class="item3">de Oliveira</div>
         <div class="item3">31</div>
     </section>
+    <br>
     <h1 class="item2">Alignt items - Flex Start</h1>
     <section class="container start">
         <div class="item3">Arthur</div>
@@ -334,6 +367,7 @@
         <div class="item3">de Oliveira</div>
         <div class="item3">31</div>
     </section>
+    <br>
     <h1 class="item2">Alignt items - Flex End</h1>
     <section class="container end">
         <div class="item3">Arthur</div>
@@ -341,6 +375,7 @@
         <div class="item3">de Oliveira</div>
         <div class="item3">31</div>
     </section>
+    <br>
     <h1 class="item2">Alignt items - Baseline</h1>
     <section class="container baseline">
         <div class="item3">Arthur</div>
@@ -348,10 +383,20 @@
         <div class="item3">de Oliveira</div>
         <div class="item3"><br>todos os guerreiros desse mundo ção.</div>
     </section>
+    <br>
     <h1 class="item2">Alinhamento Central de Item</h1>
     <section class="container central center">
         <div class="item3">A propriedade CSS align-items estabelece o valor align-self em todos filhos diretos como um grupo. A propriedade align-self estabelece o alinhamento de um certo item dentro do bloco que o contém.</div>
     </section>
+    <br>
+    <h1 class="item2">Exemplo Flexgrow variado</h1>
+    <div class="container3">
+        <div class="item2 fg-1 red">MENU</div>
+        <div class="item2 fg-3 red">PRODUTOS</div>
+        <div class="item2 fg-0 red">FAQ</div>
+        <div class="item2 fg-2 red">CONTATO</div>
+    </div>
+    <br>
 <!-- column e column reverse-->
     <h1 class="item2">Exemplos de column e column-reverse</h1>
     <ul class="column">    
